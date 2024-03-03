@@ -4,7 +4,7 @@ data NatStar : Set where
   one  : NatStar
   succ : NatStar -> NatStar
 
--- copy oparators from the Agda standard library
+-- copy operators from the Agda standard library
 -- Data.Nat
 infixl 6 _+_
 

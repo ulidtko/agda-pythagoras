@@ -10,5 +10,6 @@ http://www.cs.ru.nl/~freek/comparison/comparison.pdf
 open import Algebra.Core
 open import Level
 
+-- FIXME nothing more than a flipped version of Algebra.Definitions.LeftCancellative
 Cancel : Op₂ A -> Set (l ⊔ a)
 Cancel _∙_ = ∀ x y z -> (z ∙ x) ≈ (z ∙ y) -> x ≈ y

@@ -34,7 +34,7 @@ record CancellativeAbelianMonoid c l : Set (suc (c ⊔ l)) where
     ε       : Carrier
     isCancellativeAbelianMonoid : IsCancellativeAbelianMonoid _≈_ _∙_ ε
 
-  open IsCancellativeAbelianMonoid isCancellativeAbelianMonoid public
+  open IsCancellativeAbelianMonoid isCancellativeAbelianMonoid hiding (setoid) public
 
   commutativeMonoid : CommutativeMonoid c l
   commutativeMonoid 
