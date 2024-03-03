@@ -15,11 +15,10 @@ http://www.cs.ru.nl/~freek/comparison/comparison.pdf
 open import Data.Product
 open import Data.Sum
 open import Relation.Binary
-import Relation.Binary.EqReasoning as EqReasoning
+import Relation.Binary.Reasoning.Setoid as EqReasoning
 
 import Property
-module P = Property a l m
-open P
+open module P = Property a l m
 
 open EqReasoning (≈-setoid)
 
