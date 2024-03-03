@@ -7,7 +7,7 @@ The original proof is written by Thierry Coquand.
 http://www.cs.ru.nl/~freek/comparison/comparison.pdf
 -}
 
-open import Algebra.FunctionProperties
+open import Algebra.Core
 open import Level
 
 Cancel : Op₂ A -> Set (l ⊔ a)

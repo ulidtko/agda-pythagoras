@@ -2,8 +2,7 @@ module Corollary where
 
 open import Algebra
 open import Function
-import Algebra.FunctionProperties as FunctionProperties
-open FunctionProperties
+open import Algebra.Definitions
 open import Algebra.Structures
 open import Level
 open import Relation.Binary.Core

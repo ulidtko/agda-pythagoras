@@ -1,7 +1,7 @@
 module NatStarProperties where
 
 open import Function
-open import Algebra.FunctionProperties
+open import Algebra.Definitions
 open import Algebra.Structures
 open import Data.Empty
 open import Relation.Binary.Core

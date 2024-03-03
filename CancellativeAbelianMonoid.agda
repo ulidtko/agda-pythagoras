@@ -6,9 +6,8 @@ http://www.cs.ru.nl/~freek/comparison/comparison.pdf
 -}
 
 open import Algebra
-import Algebra.FunctionProperties as FunctionProperties
+open import Algebra.Definitions
 open import Algebra.Structures
-open FunctionProperties
 open import Level
 open import Relation.Binary
 
@@ -17,7 +16,7 @@ import Cancel
 record IsCancellativeAbelianMonoid 
          {a l} {A : Set a} (≈ : Rel A l) (_∙_ : Op₂ A)
          (ε : A) : Set (a ⊔ l) where
-  open FunctionProperties ≈
+  open Algebra.Definitions ≈
   open Cancel ≈
   field
     isCommutativeMonoid : IsCommutativeMonoid ≈ _∙_ ε

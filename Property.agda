@@ -7,7 +7,7 @@ module Property
   where
 
 open import Algebra
-open import Algebra.FunctionProperties
+open import Algebra.Definitions
 open import Algebra.Structures
 open import Data.Product
 open import Data.Sum
