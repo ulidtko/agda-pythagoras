@@ -14,6 +14,8 @@ open import Data.Sum
 open import Level
 open import Relation.Binary
 open import Relation.Binary.Core
+open import Relation.Binary.Bundles using (Setoid)
+open import Relation.Binary.PropositionalEquality.Core using (_≡_)
 open import Relation.Nullary
 open import Relation.Unary
 
@@ -45,6 +47,13 @@ semigroup = CancellativeAbelianMonoid.semigroup m
 
 isSemigroup : IsSemigroup _≈_ _∙_
 isSemigroup = Semigroup.isSemigroup semigroup
+
+----
+monoid : CommutativeMonoid a l
+monoid = CancellativeAbelianMonoid.commutativeMonoid m
+
+isMonoid : IsCommutativeMonoid _≈_ _∙_ ε
+isMonoid = CancellativeAbelianMonoid.isCommutativeMonoid m
 ----
 
 assoc : Associative _≈_ _∙_
@@ -56,16 +65,13 @@ assoc = IsSemigroup.assoc isSemigroup
 ----
 ≈-setoid : Setoid a l
 ≈-setoid = Semigroup.setoid semigroup
-
-isPreorder : IsPreorder _≡_ _≈_
-isPreorder = Setoid.isPreorder ≈-setoid
 ----
 
 ≈-refl : Reflexive _≈_
-≈-refl = IsPreorder.refl isPreorder
+≈-refl = IsCommutativeMonoid.refl isMonoid
 
 ≈-trans : Transitive _≈_
-≈-trans = IsPreorder.trans isPreorder
+≈-trans = IsCommutativeMonoid.trans isMonoid
 
 ----
 isEquivalence : IsEquivalence _≈_
